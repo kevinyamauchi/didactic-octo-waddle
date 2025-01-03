@@ -1,0 +1,9 @@
+authors:
+  kevinyamauchi:
+    name: Kevin Yamauchi
+    description: Scientist and engineer
+    avatar: https://kevinyamauchi.github.io/images/profile.png
+  squidfunk:
+    name: Martin Donath
+    description: Creator
+    avatar: https://github.com/squidfunk.png
