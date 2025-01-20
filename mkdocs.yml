@@ -59,8 +59,11 @@ theme:
 
 markdown_extensions:
   - admonition
+  - attr_list
   - pymdownx.details
   - pymdownx.superfences
+
+copyright: All materials licensed <a href="https://creativecommons.org/licenses/by/4.0/">CC-BY-4.0</a> unless otherwise noted.
 
 extra:
   social:
