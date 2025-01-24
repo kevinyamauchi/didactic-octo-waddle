@@ -5,20 +5,26 @@ authors:
 ---
 # Setting up Python with uv and VS Code
 
-I have been a long time conda (now mamba) + VS Code  user and I have been wanting to try out `uv`. I decided to finally give it a go and I am documenting the process here.
+In this post, I share how I set up my Python development environment using `uv` and Visual Studio Code.
 
 <!-- more -->
 
-## Why try something new?
-I am generally a proponent of "if it ain't broke, don't fix it" and my conda + VS Code set up was working. There were a couple of pain points though:
+## Why uv?
 
-- my conda installation was ~40 GB on my laptop. I generally make an environment for each project and I often use the same core libraries (`numpy`, `skimage`, `napari`, etc.), so a lot of that space is probably duplicated libraries. `uv` has a global cache which should help deduplicate some libraries.
-- Pycharm can really slow down my computer when it's indexing my libraries. I wanted to try a new IDE that might be a bit lighter.
+I use `uv` for managing my Python environments and Python project dependencies. My main reasons for using `uv` are:
 
-Additionally, there were a couple of features of `uv` that I wanted to experiment with:
-
-- I like that you can write the requirements run a script in the header and then just run it with `uv run`. For scientific research, this is really handy because I write a lot of scripts I think are a one-off and then I want to run them again later.
+- It is super fast. I was skeptical that the speed would really matter, but it really is so much faster that it changes they way that I use environments. When they only take a few seconds to build, I can create and throw them away at will.
+- I like that you can write the requirements run a script in the header and then just run it with `uv run`. For scientific research, this is really handy because I write a lot of scripts I think are a one-off and then I want to run them again later. I no longer have to try and remember which environment I ran the script in.
 - I like that you can specify sources for dependencies that can depend on the platform you are installing the package on. For hardware accelerated libraries (e.g., `torch`) this seems like it could be a way to simplify installation for the end user. Let's see how it goes...
+
+## Why Visual Studio Code?
+
+I don't really have a strong opinion on which IDE/text editor to use. I also used PyCharm for many years. However, I have recently been using VS Code for the following reasons:
+
+- It is free and available on most platforms. I like that all of my students can use VS Code when I am teaching.
+- It is reasonably light weight.
+- It works for many languages. I like that I don't have to swich programs for different projects.
+- It has a decent Python debugger.
 
 ## Installing everything
 
@@ -52,7 +58,6 @@ I then made some small updates to my user settings. You can access the user sett
     "python.analysis.extraPaths": [
         "${workspaceFolder}/src"
     ],
-    "python.envFile": "${workspaceFolder}/.env",
     "python.terminal.activateEnvironment": true,
 
     // Test settings
@@ -73,5 +78,5 @@ I then made some small updates to my user settings. You can access the user sett
 
 ### Installing uv
 
-I installed `uv` using the instructions on [on their readme](https://github.com/astral-sh/uv).
+I installed `uv` using the instructions on [their readme](https://github.com/astral-sh/uv). 
 
