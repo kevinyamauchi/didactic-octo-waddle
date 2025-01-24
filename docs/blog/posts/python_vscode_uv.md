@@ -78,5 +78,7 @@ I then made some small updates to my user settings. You can access the user sett
 
 ### Installing uv
 
-I installed `uv` using the instructions on [their readme](https://github.com/astral-sh/uv). 
+I installed `uv` using the instructions on [their readme](https://github.com/astral-sh/uv). There are a few tutorials on the `uv` docs that I found helpful for getting started:
 
+- [Running scripts](https://docs.astral.sh/uv/guides/scripts/). I think one of the strengths of `uv` is the fact that it is so fast to create environments that you can make them just to run a script. This is great for being able to re-run scripts down the road. This tutorial shows how to run scripts using `uv`. 
+- [Working on projects](https://docs.astral.sh/uv/guides/projects/). This tutorial goes into how to use `uv` to manage your Python projects.
