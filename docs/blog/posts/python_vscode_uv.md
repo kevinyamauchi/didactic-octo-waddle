@@ -29,9 +29,9 @@ I don't really have a strong opinion on which IDE/text editor to use. I also use
 ## Installing everything
 
 ### Setting up VS Code
-I installed VS Code using the binary from the website. You could also consider using [VS Codium](https://vscodium.com/), which is a version of VS Code [released with an MIT license and built with telemetry disabled](https://vscodium.com/#why).
+I install VS Code using the binary from the website. You could also consider using [VS Codium](https://vscodium.com/), which is a version of VS Code [released with an MIT license and built with telemetry disabled](https://vscodium.com/#why).
 
-Next, I added some extensions. You can open the extension marketplace from the View -> Extensions menu. I installed the following extensions:
+Next, I added some extensions. You can open the extension marketplace from the View -> Extensions menu. By default, I install the following extensions:
 
 - Python
 - Python Debugger
@@ -39,7 +39,7 @@ Next, I added some extensions. You can open the extension marketplace from the V
 - Even Better TOML (nice for editting the toml files that are common in Python projects)
 - Ruff (linting the code)
 
-I then made some small updates to my user settings. You can access the user settings by first opening the command pallet (CMD + SHIFT + P) and then typing "user settings json". If you select this, it will open the JSON file containing your user settings in the editor. I updated my user settings as follows:
+I then make some small updates to my user settings. You can access the user settings by first opening the command pallet (CMD + SHIFT + P) and then typing "user settings json". If you select this, it will open the JSON file containing your user settings in the editor. I updated my user settings as follows:
 
 ```json
 {
@@ -78,7 +78,7 @@ I then made some small updates to my user settings. You can access the user sett
 
 ### Installing uv
 
-I installed `uv` using the instructions on [their readme](https://github.com/astral-sh/uv). There are a few tutorials on the `uv` docs that I found helpful for getting started:
+I install `uv` using the instructions on [their readme](https://github.com/astral-sh/uv). There are a few tutorials on the `uv` docs that I found helpful for getting started:
 
 - [Running scripts](https://docs.astral.sh/uv/guides/scripts/). I think one of the strengths of `uv` is the fact that it is so fast to create environments that you can make them just to run a script. This is great for being able to re-run scripts down the road. This tutorial shows how to run scripts using `uv`. 
 - [Working on projects](https://docs.astral.sh/uv/guides/projects/). This tutorial goes into how to use `uv` to manage your Python projects.
