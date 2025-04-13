@@ -2,8 +2,10 @@
 date: 2025-01-20
 authors:
     - kevinyamauchi
+categories:
+    - academia
 ---
-# Taking notes Obsidian for research
+# Taking notes in Obsidian for research
 
 I use [Obsidian](https://obsidian.md/) for taking digital notes for work. This post shows how I have set up Obsidian for my work as a scientist. My daily usage of Obsidian includes brainstorming, project planning, writing, and taking notes on papers (i.e., literature review).
 

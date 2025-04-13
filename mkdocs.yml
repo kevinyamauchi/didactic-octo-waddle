@@ -4,6 +4,9 @@ plugins:
   - blog:
       blog_dir: blog
       authors_file: "{blog}/.authors.yml"
+      categories_allowed:
+        - python
+        - academia
 
 nav:
   - About: index.md
@@ -60,10 +63,14 @@ theme:
 markdown_extensions:
   - admonition
   - attr_list
+  - md_in_html
   - pymdownx.details
   - pymdownx.superfences
 
 copyright: All materials licensed <a href="https://creativecommons.org/licenses/by/4.0/">CC-BY-4.0</a> unless otherwise noted.
+
+extra_css:
+  - stylesheets/extra.css
 
 extra:
   social:

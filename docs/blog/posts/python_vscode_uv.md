@@ -2,6 +2,8 @@
 date: 2025-01-16
 authors:
     - kevinyamauchi
+categories:
+    - python
 ---
 # Setting up Python with uv and VS Code
 
@@ -15,6 +17,7 @@ I use `uv` for managing my Python environments and Python project dependencies. 
 
 - It is super fast. I was skeptical that the speed would really matter, but it really is so much faster that it changes they way that I use environments. When they only take a few seconds to build, I can create and throw them away at will.
 - I like that you can write the requirements run a script in the header and then just run it with `uv run`. For scientific research, this is really handy because I write a lot of scripts I think are a one-off and then I want to run them again later. I no longer have to try and remember which environment I ran the script in.
+- Almost all of the metadata used by `uv` is standard Python metadata so you you aren't locked in to their ecosystem.
 - I like that you can specify sources for dependencies that can depend on the platform you are installing the package on. For hardware accelerated libraries (e.g., `torch`) this seems like it could be a way to simplify installation for the end user. Let's see how it goes...
 
 ## Why Visual Studio Code?
