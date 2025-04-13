@@ -1,0 +1,8 @@
+.md-typeset .grid.cards.no-border > ul > li {
+    border: 0;
+    box-shadow: none;
+}
+
+.md-typeset .grid.cards.no-border > ul > li:hover {
+    box-shadow: none;
+}

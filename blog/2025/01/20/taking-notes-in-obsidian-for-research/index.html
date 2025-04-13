@@ -1,0 +1,825 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../../16/setting-up-python-with-uv-and-vs-code/">
+      
+      
+      
+      <link rel="icon" href="../../../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.11">
+    
+    
+      
+        <title>Taking notes in Obsidian for research - Kevin Yamauchi</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../../assets/stylesheets/main.4af4bdda.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="light-blue">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#taking-notes-in-obsidian-for-research" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../../.." title="Kevin Yamauchi" class="md-header__button md-logo" aria-label="Kevin Yamauchi" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.46 6.28 11.05 9c-2.58.26-4.55 2.41-4.55 5a5 5 0 0 0 5 5c2.05 0 3.81-1.23 4.58-3H13.5v-2h8v2h-2.25a8.05 8.05 0 0 1-2.46 4h2.71v2h-16v-2h2.71a8 8 0 0 1-2.71-6c0-3.63 2.46-6.8 5.96-7.72m3.28-4.21.76 1.3.86-.5 3.5 6.06-3.47 2-3.5-6.06.87-.5-.76-1.3z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Kevin Yamauchi
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Taking notes in Obsidian for research
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="light-blue"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  About
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../../research/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Research
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../../teaching/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Teaching
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../../cv/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  CV
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    <li class="md-tabs__item md-tabs__item--active">
+      <a href="../../../../" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Blog
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+                
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" hidden>
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../../.." title="Kevin Yamauchi" class="md-nav__button md-logo" aria-label="Kevin Yamauchi" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.46 6.28 11.05 9c-2.58.26-4.55 2.41-4.55 5a5 5 0 0 0 5 5c2.05 0 3.81-1.23 4.58-3H13.5v-2h8v2h-2.25a8.05 8.05 0 0 1-2.46 4h2.71v2h-16v-2h2.71a8 8 0 0 1-2.71-6c0-3.63 2.46-6.8 5.96-7.72m3.28-4.21.76 1.3.86-.5 3.5 6.06-3.47 2-3.5-6.06.87-.5-.76-1.3z"/></svg>
+
+    </a>
+    Kevin Yamauchi
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    About
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../research/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Research
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../teaching/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Teaching
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../cv/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    CV
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      <a href="../../../../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Blog
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+                
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#what-do-i-use-obsidian-for" class="md-nav__link">
+    <span class="md-ellipsis">
+      What do I use Obsidian for?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#why-obsidian" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why Obsidian?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-i-use-obsidian" class="md-nav__link">
+    <span class="md-ellipsis">
+      How I use Obsidian
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#plugins" class="md-nav__link">
+    <span class="md-ellipsis">
+      Plugins
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#zotero-integration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Zotero integration
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Zotero integration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#setting-up-zotero" class="md-nav__link">
+    <span class="md-ellipsis">
+      Setting up Zotero
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#installing-pandoc" class="md-nav__link">
+    <span class="md-ellipsis">
+      Installing pandoc
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setting-up-obsidian" class="md-nav__link">
+    <span class="md-ellipsis">
+      Setting up Obsidian
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Setting up Obsidian">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configure-pandoc-plugin" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configure Pandoc plugin
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configure-pandoc-reference-list" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configure Pandoc Reference List
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#make-inline-citations-in-an-obsidian-note" class="md-nav__link">
+    <span class="md-ellipsis">
+      Make inline citations in an Obsidian note
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+  <div class="md-content md-content--post" data-md-component="content">
+    <div class="md-sidebar md-sidebar--post" data-md-component="sidebar" data-md-type="navigation">
+      <div class="md-sidebar__scrollwrap">
+        <div class="md-sidebar__inner md-post">
+          <nav class="md-nav md-nav--primary">
+            <div class="md-post__back">
+              <div class="md-nav__title md-nav__container">
+                <a href="../../../../" class="md-nav__link">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+                  <span class="md-ellipsis">
+                    Back to index
+                  </span>
+                </a>
+              </div>
+            </div>
+            
+              <div class="md-post__authors md-typeset">
+                
+                  <div class="md-profile md-post__profile">
+                    <span class="md-author md-author--long">
+                      <img src="https://github.com/kevinyamauchi/didactic-octo-waddle/blob/main/docs/blog/posts/assets/profile.png?raw=true" alt="Kevin Yamauchi">
+                    </span>
+                    <span class="md-profile__description">
+                      <strong>
+                        
+                          Kevin Yamauchi
+                        
+                      </strong>
+                      <br>
+                      Scientist and engineer
+                    </span>
+                  </div>
+                
+              </div>
+            
+            <ul class="md-post__meta md-nav__list">
+              <li class="md-nav__item md-nav__item--section">
+                <div class="md-post__title">
+                  <span class="md-ellipsis">
+                    Metadata
+                  </span>
+                </div>
+                <nav class="md-nav">
+                  <ul class="md-nav__list">
+                    <li class="md-nav__item">
+                      <div class="md-nav__link">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 19H5V8h14m-3-7v2H8V1H6v2H5c-1.11 0-2 .89-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2h-1V1m-1 11h-5v5h5z"/></svg>
+                        <time datetime="2025-01-20 00:00:00+00:00" class="md-ellipsis">January 20, 2025</time>
+                      </div>
+                    </li>
+                    
+                    
+                      <li class="md-nav__item">
+                        <div class="md-nav__link">
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9 3v15h3V3zm3 2 4 13 3-1-4-13zM5 5v13h3V5zM3 19v2h18v-2z"/></svg>
+                          <span class="md-ellipsis">
+                            in
+                            
+                              <a href="../../../../category/academia/">academia</a></span>
+                        </div>
+                      </li>
+                    
+                    
+                      
+                      <li class="md-nav__item">
+                        <div class="md-nav__link">
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20a8 8 0 0 0 8-8 8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8m0-18a10 10 0 0 1 10 10 10 10 0 0 1-10 10C6.47 22 2 17.5 2 12A10 10 0 0 1 12 2m.5 5v5.25l4.5 2.67-.75 1.23L11 13V7z"/></svg>
+                          <span class="md-ellipsis">
+                            
+                              6 min read
+                            
+                          </span>
+                        </div>
+                      </li>
+                    
+                  </ul>
+                </nav>
+              </li>
+            </ul>
+            
+          </nav>
+          
+        </div>
+      </div>
+    </div>
+    <article class="md-content__inner md-typeset">
+      
+        
+  
+
+
+
+
+<h1 id="taking-notes-in-obsidian-for-research">Taking notes in Obsidian for research</h1>
+<p>I use <a href="https://obsidian.md/">Obsidian</a> for taking digital notes for work. This post shows how I have set up Obsidian for my work as a scientist. My daily usage of Obsidian includes brainstorming, project planning, writing, and taking notes on papers (i.e., literature review).</p>
+<!-- more -->
+
+<h2 id="what-do-i-use-obsidian-for">What do I use Obsidian for?</h2>
+<p>I use Obsidian to store text notes for work. The content of these notes ranges from ideas about projects to literature reviews. One thing I really like about Obsidian is that because it integrates nicely with my reference manager (Zotero), I can easily cite relevant work in my notes. This allows me to use Obsidian as a way to draft papers and proposals. I still use a pen and notebook for a lot of my brainstorming, doodling, etc. as I find it to be more free form than taking text notes in Obsidian. However, for purely text things, Obsidian has been great.</p>
+<h2 id="why-obsidian">Why Obsidian?</h2>
+<p>I have generally resisted using a digital note taking software because I was afraid of the risk of losing all of my notes if the service went out of business and of getting locked into a subscription service. Further, I wanted something that works well across Linux, Mac OS and iOS. Finally, I wanted a desktop app and not a web app that runs in the browser. I felt like like Obsidian addressed these concerns, so I gave it a try. I have been happy so far. These are my main reasons to continue using Obsidian:</p>
+<ul>
+<li>The notes are just Markdown files in folders. This means that I will be able to continue using the notes without the Obsidian app.</li>
+<li>Obsidian works well offline. I like to work offline to avoid distractions, so I didn't want something that requires a persistant network connection.</li>
+<li>Integrating Obsidian with Zotero, my reference management software of choice, allows me to write notes with citations.</li>
+<li>The app works nicely across Linux, Mac OS, and iOS. The paid Sync service has worked seamlessly for me so far.</li>
+</ul>
+<h2 id="how-i-use-obsidian">How I use Obsidian</h2>
+<p>There are a ton of tutorials on how to use Obsidian available on the internet. Many of which describe intriguing but super complicated systems where taking notes becomes a project in and of it self. I am simple and I more-or-less just treat it as a collection of searchable text files. Obsidian has the ability to create links between notes and visualize your note collection (vault in Obsidian parlance) as a graph. I personally don't find this super useful and the overhead of remembering to link notes to be too much. The only linking that I do is back to Index notes that serve as a hub for a collection of related notes (e.g., for a specific project). My "system" is as follows:</p>
+<p>In my Obsidian vault, I have three folders:</p>
+<ul>
+<li>Active: these are the notes I am currently working on.</li>
+<li>Paused: these are the notes I am not currently working on.</li>
+<li>Indexes: here I put notes that serve as indexes for categories of notes. For example, each project I am working gets an "index" note. I will describe how they are used below.</li>
+</ul>
+<p>My workflow is as follows:</p>
+<ol>
+<li>Create a new note in the Active folder.</li>
+<li>Add a link to any of the Index notes that are relevant. If necessary, I create a new Index note.</li>
+<li>Write.</li>
+<li>When I am "done" with the note, I move it to the Paused folder. Note that, "done" in this context just means that I am not actively working on it. If I need to add more or revise it later, I just move the note back to the Active folder.</li>
+</ol>
+<h2 id="plugins">Plugins</h2>
+<p>Obsidian has a huge <a href="https://obsidian.md/plugins">plugin ecosystem</a>. I haven't explored most of them, but here are the ones I find useful:</p>
+<ul>
+<li><a href="https://github.com/denolehov/obsidian-url-into-selection">Paste URL into selection</a>: when I have some text highlighted, I can paste a link (cmd + v) and it will automatically turn that text into a hyperlink.</li>
+<li>References integration: these plugins work together to allow me to add citations to notes using my Zotero library (see "Zotero integration" section below.)<ul>
+<li><a href="https://github.com/OliverBalfour/obsidian-pandoc">Pandoc Plugin</a></li>
+<li><a href="https://github.com/mgmeyers/obsidian-pandoc-reference-list">Pandoc Reference List</a></li>
+<li><a href="https://github.com/mgmeyers/obsidian-zotero-integration">Zotero Integration</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="zotero-integration">Zotero integration</h2>
+<p>I like keeping notes on papers I read in Obsidian. For all of my academic work, I use <a href="https://www.zotero.org/">Zotero</a> to manage my references (i.e., papers). Below I describe how I have set up Obsidian so that I can cite papers from my Zotero library and render a bibliography.</p>
+<p>This is basically a simplified version of the <a href="https://medium.com/@alexandraphelan/an-updated-academic-workflow-zotero-obsidian-cffef080addd">workflow from Alexandra Phelan</a>. I would recommend checking out their guide for a more full-featured workflow.</p>
+<h3 id="setting-up-zotero">Setting up Zotero</h3>
+<p>The Zotero plugin for Obsidian requires you to have the <a href="https://retorque.re/zotero-better-bibtex/">Better Bibtex for Zotero</a> installed in your Zotero Desktop application. In order to install the Better Bibtex for Zotero plugin, see their <a href="https://retorque.re/zotero-better-bibtex/installation/index.html">instructions</a>. Once installed, you should see it listed under your plugins with the activation toggle switched "on".</p>
+<p><img alt="zotero plugin manager" src="../../../../assets/obsidian_zotero/zotero_plugins.png" /></p>
+<p>Depending on your version of Zotero, you may need to restart Zotero in order for the plugin to work properly.</p>
+<h3 id="installing-pandoc">Installing pandoc</h3>
+<p>The integration I use requires <a href="https://pandoc.org/">pandoc</a>. You can check out their <a href="https://pandoc.org/">installation guide</a> for instructions on how to install pandoc on your system.</p>
+<p>On Mac OS, I use <code>brew</code>:</p>
+<div class="highlight"><pre><span></span><code>brew<span class="w"> </span>install<span class="w"> </span>pandoc
+</code></pre></div>
+<p>You can confirm <code>pandoc</code> is installed by typing the following command in your terminal</p>
+<p><div class="highlight"><pre><span></span><code>pandoc<span class="w"> </span>--version
+</code></pre></div>
+which should return the version of <code>pandoc</code> that is installed.</p>
+<h3 id="setting-up-obsidian">Setting up Obsidian</h3>
+<p>First, install the following community plugins:</p>
+<ul>
+<li><a href="https://github.com/OliverBalfour/obsidian-pandoc">Pandoc Plugin</a></li>
+<li><a href="https://github.com/mgmeyers/obsidian-pandoc-reference-list">Pandoc Reference List</a></li>
+<li><a href="https://github.com/mgmeyers/obsidian-zotero-integration">Zotero Integration</a></li>
+</ul>
+<h4 id="configure-pandoc-plugin">Configure Pandoc plugin</h4>
+<p>Open the preferences for the Pandoc plugin (Settings -&gt; Community Plugins -&gt; Pandoc Plugin). You may see that the plugin says that it cannot find <code>pandoc</code> on the Path (see the red text at the top of the preferences pane).</p>
+<p><img alt="Pandoc plugin when the pandoc path is incorrect" src="../../../../assets/obsidian_zotero/pandoc_plugin_incorrect.png" /></p>
+<p>You can get the path to <code>pandoc</code> by typing the following command in your terminal, which will return the path to your <code>pandoc</code> installation.</p>
+<div class="highlight"><pre><span></span><code>which<span class="w"> </span>pandoc
+</code></pre></div>
+<p>Copy the path that is returned from the above command. You can then tell the Pandoc plugin where to find <code>pandoc</code> by pasting the path in the "Pandoc path" field of the preferences. After doing so, restart Obsidian and check the preferences again. You should see that the error message about being unable to find <code>pandoc</code> should no longer be present.</p>
+<p><img alt="Pandoc plugin when the pandoc path is correct" src="../../../../assets/obsidian_zotero/pandoc_plugin_correct.png" /></p>
+<h4 id="configure-pandoc-reference-list">Configure Pandoc Reference List</h4>
+<p>Open the preferences for the Pandoc Reference List plugin (Settings -&gt; Community Plugins -&gt; Pandoc Reference List) and do the following:</p>
+<ol>
+<li>Check that the path to <code>pandoc</code> is correct. This should match the path you set in the Pandoc Plugin configuration above.</li>
+<li>Make Zotero the source for the citations by turning on the "Pull bibliography from Zotero" option.</li>
+<li>
+<p>Ensure that the following options turned on.</p>
+<ol>
+<li>Render live preview inline citations: This will convert the cite keys to reference numbers while you are editing.</li>
+<li>Render reading mode inline citations: his will convert the cite keys to reference numbers while you are in reading mode.</li>
+<li>Show cite key suggestions: This will suggest cite keys as you make citations in the markdown.</li>
+</ol>
+</li>
+</ol>
+<p><img alt="Pandoc references list plugin options" src="../../../../assets/obsidian_zotero/pandoc_reference_list_options_1.png" /></p>
+<p><img alt="Pandoc references list plugin options" src="../../../../assets/obsidian_zotero/pandoc_reference_list_options_2.png" /></p>
+<h3 id="make-inline-citations-in-an-obsidian-note">Make inline citations in an Obsidian note</h3>
+<p>Now that you have the plugins set up, you can make inline citations in your Obsidian notes! To do so, simply enter <code>[@</code> where you would like to place the citation and start typing the cite key of the item you would like to cite. This will bring up a box you can search your zotero library for the relevant citation.</p>
+<p><img alt="Inline citations in Obsidian" src="../../../../assets/obsidian_zotero/inline_citation.png" /></p>
+<p>You can select the citation of interest by using the up/down arrow keys and pressing enter. Once you have done so, the associated reference will show up in the references pane on the right.</p>
+<p><img alt="References in Obsidian" src="../../../../assets/obsidian_zotero/reference.png" /></p>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+  
+
+
+
+      
+    </article>
+  </div>
+
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      All materials licensed <a href="https://creativecommons.org/licenses/by/4.0/">CC-BY-4.0</a> unless otherwise noted.
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/kevinyamauchi" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://bsky.app/profile/kevinyamauchi.bsky.social" target="_blank" rel="noopener" title="bsky.app" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M111.8 62.2C170.2 105.9 233 194.7 256 242.4c23-47.6 85.8-136.4 144.2-180.2 42.1-31.6 110.3-56 110.3 21.8 0 15.5-8.9 130.5-14.1 149.2-18.2 64.8-84.4 81.4-143.3 71.3C456 322 482.2 380 425.6 438c-107.4 110.2-154.3-27.6-166.3-62.9-1.7-4.9-2.6-7.8-3.3-7.8s-1.6 3-3.3 7.8c-12 35.3-59 173.1-166.3 62.9-56.5-58-30.4-116 72.5-133.5C100 314.6 33.8 298 15.7 233.1 10.4 214.4 1.5 99.4 1.5 83.9c0-77.8 68.2-53.4 110.3-21.8z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../../../../..", "features": ["announce.dismiss", "content.action.edit", "content.action.view", "content.code.annotate", "content.code.copy", "content.tooltips", "navigation.indexes", "navigation.sections", "navigation.tabs", "navigation.tabs.sticky", "navigation.top", "search.highlight", "search.suggest", "toc.follow"], "search": "../../../../../assets/javascripts/workers/search.f8cc74c7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../../../assets/javascripts/bundle.c8b220af.min.js"></script>
+      
+    
+  </body>
+</html>
